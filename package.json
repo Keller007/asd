@@ -9,6 +9,7 @@
     "lint": "prettier --check \"src/**/*.{js,jsx}\""
   },
   "dependencies": {
+    "@apollo/client": "^3.7.10",
     "@snowpack/plugin-sass": "^1.4.0",
     "apollo-server": "^3.12.0",
     "concurrently": "^7.6.0",
@@ -16,7 +17,7 @@
     "express": "^4.18.2",
     "express-graphql": "^0.12.0",
     "graphql": "^16.6.0",
-    "mongoose": "^7.0.2", 
+    "mongoose": "^7.0.2",
     "nodemon": "^2.0.22",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

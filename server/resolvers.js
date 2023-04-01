@@ -17,6 +17,16 @@ exports.resolvers = {
     category: (_, arg, context) => {
       return db.categories.find((item) => item.id === arg.id);
     },
+    businesses: (_, arg, context) => {
+      console.log('!');
+      if (arg.filter.businescategories === 'All') return db.businesses;
+
+      return [
+        db.businesses.find(
+          (item) => item.category === arg.filter.businescategories,
+        ),
+      ];
+    },
   },
   Category: {
     products: (parent, args, context) => {
@@ -48,7 +58,7 @@ exports.resolvers = {
         id: uuid(),
         name: args.input.name,
       };
-      db.categories.push(newCategory); 
+      db.categories.push(newCategory);
       return newCategory;
     },
     addProduct: (parent, args, context) => {
@@ -56,7 +66,7 @@ exports.resolvers = {
         id: uuid(),
         ...args.input,
       };
-	  
+
       console.log(newCategory);
       return newCategory;
     },

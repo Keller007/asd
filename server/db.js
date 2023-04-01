@@ -287,19 +287,19 @@ const reviews = [
 ];
 const businesses = [
 	{
-	  businessId: "b1",
+	  businessId: 'b223f5d4-6a4b-4db5-8ec3-acc228c36260',
 	  name: "San Mateo Public Library",
 	  address: "55 W 3rd Ave",
 	  category: "Library",
 	},
 	{
-	  businessId: "b2",
+	  businessId: 'b22da5d4-6a4b-4db5-8ec3-acc254c36260',
 	  name: "Ducky's Car Wash",
 	  address: "716 N San Mateo Dr",
 	  category: "Car Wash",
 	},
 	{
-	  businessId: "b3",
+	  businessId: 'b22da5d4-6a4b-5rb5-8ec3-acc228c36260',
 	  name: "Hanabi",
 	  address: "723 California Dr",
 	  category: "Restaurant",

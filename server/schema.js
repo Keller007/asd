@@ -6,9 +6,13 @@ exports.typeDefs = gql`
     product(id: ID!): Product
     categories: [Category!]!
     category(id: ID!): Category
+    businesses (filter: BusinessCat): [Businesses!]
   }
   input ProductOnSale {
     onSale: Boolean
+  }
+  input BusinessCat {
+	businescategories: String!
   }
   type Category {
     id: ID!
@@ -38,7 +42,7 @@ exports.typeDefs = gql`
     quantity: Int!
     price: Float!
     onSale: Boolean!
-	category: Category 
+    category: Category
   }
   input ReviewsRating {
     rating: Int
@@ -50,22 +54,29 @@ exports.typeDefs = gql`
     comment: String!
     rating: Int!
   }
+  type Businesses {
+    businessId: ID!
+    name: String!
+    address: String
+    category: String!
+  }
+
+# -------------------------------
+
   type Mutation {
     addCategory(input: AddCategoryInput): AddCategory!
-	addProduct(input: AddProductInput): AddProduct!
-
+    addProduct(input: AddProductInput): AddProduct!
   }
   input AddCategoryInput {
     name: String!
   }
   input AddProductInput {
-	name:  String!
-    description:  String!
+    name: String!
+    description: String!
     quantity: Int!
     price: Int!
-    image:  String!
+    image: String!
     onSale: Boolean!
     categoryId: ID!
-
   }
 `;
